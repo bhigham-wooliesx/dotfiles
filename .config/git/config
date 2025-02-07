@@ -1,0 +1,33 @@
+[user]
+	useConfigOnly = true
+
+[core]
+  pager = delta
+
+[init]
+  defaultBranch = main
+
+[pull]
+	rebase = true
+
+[push]
+  default = current
+  autoSetupRemote = true
+
+[merge]
+  conflictstyle = diff3
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true    # use n and N to move between diff sections
+  side-by-side = true
+
+[diff "lesspipe"]
+  textconv = LESSQUIET=1 lesspipe.sh
+  binary = true
+  cachetextconv = true
+
+[include]
+	path = ~/.config/git/config.local
