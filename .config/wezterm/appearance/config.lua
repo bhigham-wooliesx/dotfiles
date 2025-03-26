@@ -12,7 +12,7 @@ local function get_right_status_segments(window)
     {
       label = cwd_file_path,
       icon = wezterm.nerdfonts.oct_file_directory,
-      enabled = cwd_file_path ~= nil,
+      enabled = active_workspace == 'default' and cwd_file_path ~= nil,
     },
     {
       label = active_workspace,

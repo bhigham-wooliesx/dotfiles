@@ -18,7 +18,9 @@ export LESSCOLORIZER='bat --theme="Catppuccin Mocha"'
 export PROJECT_HOME="$HOME/Projects"
 
 # Disable telemetry
+export DO_NOT_TRACK=1
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
 export NEXT_TELEMETRY_DISABLED=1
 export STORYBOOK_DISABLE_TELEMETRY=1
+export TURBO_TELEMETRY_DISABLED=1
