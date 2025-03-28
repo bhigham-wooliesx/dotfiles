@@ -1,5 +1,5 @@
 [user]
-	useConfigOnly = true
+  useConfigOnly = true
 
 [core]
   pager = delta
@@ -7,27 +7,63 @@
 [init]
   defaultBranch = main
 
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true
+
+[rebase]
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
+
 [pull]
-	rebase = true
+  rebase = true
 
 [push]
   default = current
   autoSetupRemote = true
+  followTags = true
+
+[commit]
+  verbose = true
+
+[branch]
+  sort = -comitterdate
 
 [merge]
-  conflictstyle = diff3
+  conflictstyle = zdiff3
 
-[interactive]
-  diffFilter = delta --color-only
-
-[delta]
-  navigate = true    # use n and N to move between diff sections
-  side-by-side = true
+[diff]
+  algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
+  renames = true
 
 [diff "lesspipe"]
   textconv = LESSQUIET=1 lesspipe.sh
   binary = true
   cachetextconv = true
 
+[tag]
+  sort = version:refname
+
+[column]
+  ui = auto
+
+[interactive]
+  diffFilter = delta --color-only
+
+[help]
+  autocorrect = prompt
+
+[rerere]
+  enabled = true
+  autoupdate = true
+
+[delta]
+  navigate = true    # use n and N to move between diff sections
+  side-by-side = true
+
 [include]
-	path = ~/.config/git/config.local
+  path = ~/.config/git/config.local
