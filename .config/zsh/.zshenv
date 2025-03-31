@@ -7,8 +7,8 @@ export XDG_DATA_HOME=${XDG_DATA_HOME:-$HOME/.local/share}
 export XDG_STATE_HOME=${XDG_STATE_HOME:-$HOME/.local/state}
 
 # Basics
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 export PAGER="less"
 
 export LESSOPEN="| LESSQUIET=1 /opt/homebrew/bin/lesspipe.sh %s"
