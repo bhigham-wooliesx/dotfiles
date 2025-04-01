@@ -91,10 +91,67 @@ Some of the other tools I have configured:
 - [Lazygit](https://github.com/jesseduffield/lazygit)
 - [lesspipe](https://github.com/wofr06/lesspipe)
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
-- [Ranger](https://ranger.fm)
 - [Starship](https://starship.rs/)
 - [Zephyr](https://github.com/mattmc3/zephyr)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
+
+### Installing Required Tools
+
+#### On macOS (using Homebrew)
+
+Before using these dotfiles, ensure you have the necessary dependencies installed.
+
+```bash
+brew install zsh git vim neovim wezterm bat git-delta eza fnm fd fzf lazygit lesspipe starship zoxide
+```
+
+#### On Linux
+
+Some tools require manual installation or alternative sources on Linux. Check the project links above for more detailed documentation.
+
+## Troubleshooting
+
+### Common Issues
+
+- **Stow errors about existing files**: Back up and remove the existing files before stowing
+
+  ```bash
+  mv ~/.zshenv ~/.zshenv.bak
+  ```
+
+- **Missing terminal icons**: Install a [Nerd Font](https://www.nerdfonts.com/) for proper icon display
+
+  ```bash
+  # macOS
+  brew install --cask font-hack-nerd-font
+  ```
+
+- **Git config conflicts**: Ensure your local Git configuration in `~/.config/git/config.local` doesn't conflict with the repository's git config
+
+## Git Configuration
+
+This repository includes the base Git configuration, but certain personal information like your email address should not be committed to version control.
+
+To configure the `user` in Git:
+
+1. Create a `config.local` file in the `~/.config/git/` directory:
+
+   ```bash
+   mkdir -p ~/.config/git
+   touch ~/.config/git/config.local
+   ```
+
+2. Add your personal Git configuration to this file. For example:
+
+   ```gitconfig
+   [user]
+     name = Your Name
+     email = your.email@example.com
+   ```
+
+3. Git will automatically load this configuration alongside the repository's git config.
+
+**Note:** The `~/.config/git/config.local` file is ignored by Git and should not be committed to the repository.
 
 ## Customization
 
