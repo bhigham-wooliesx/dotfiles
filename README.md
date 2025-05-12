@@ -128,9 +128,11 @@ Some tools require manual installation or alternative sources on Linux. Check th
 
 - **Git config conflicts**: Ensure your local Git configuration in `~/.config/git/config.local` doesn't conflict with the repository's git config
 
-## Git Configuration
+## Git and Zsh Local Configuration
 
-This repository includes the base Git configuration, but certain personal information like your email address should not be committed to version control.
+This repository includes the base Git and Zsh configuration, but certain personal information like your email address or machine-specific environment variables should not be committed to version control.
+
+### Git: Personal Configuration
 
 To configure the `user` in Git:
 
@@ -152,6 +154,28 @@ To configure the `user` in Git:
 3. Git will automatically load this configuration alongside the repository's git config.
 
 **Note:** The `~/.config/git/config.local` file is ignored by Git and should not be committed to the repository.
+
+### Zsh: Local Environment Variables
+
+To configure personal or machine-specific environment variables for Zsh:
+
+1. Create a `.zshenv.local` file in your Zsh config directory (by default, `~/.config/zsh/`):
+
+   ```bash
+   mkdir -p ~/.config/zsh
+   touch ~/.config/zsh/.zshenv.local
+   ```
+
+2. Add your personal environment variables to this file. For example:
+
+   ```sh
+   export API_KEY="your-api-key-here"
+   export PATH="$HOME/.local/bin:$PATH"
+   ```
+
+3. This file will be automatically sourced by `.zshenv` if it exists.
+
+**Note:** The `.zshenv.local` file is ignored by Git and should not be committed to the repository.
 
 ## Customization
 

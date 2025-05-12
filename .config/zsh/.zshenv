@@ -24,3 +24,5 @@ export HOMEBREW_NO_ENV_HINTS=1
 export NEXT_TELEMETRY_DISABLED=1
 export STORYBOOK_DISABLE_TELEMETRY=1
 export TURBO_TELEMETRY_DISABLED=1
+
+[[ -r $ZDOTDIR/.zshenv.local ]] && source $ZDOTDIR/.zshenv.local

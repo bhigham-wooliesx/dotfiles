@@ -4,6 +4,7 @@
 .config/zsh/.directory_history
 .config/zsh/.zcompdump
 .config/zsh/.zcompcache
+.config/zsh/.zshenv.local
 
 # git
 .config/git/config.local
