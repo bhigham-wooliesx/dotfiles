@@ -1,5 +1,5 @@
 # Zephyr configuration
-source $ZDOTDIR/config/zephyr.zsh
+source $ZDOTDIR/plugins/zephyr.zsh
 
 # Plugins
 path_plugins=(
@@ -45,10 +45,19 @@ plugin-load --kind path $path_plugins
 plugin-load --kind fpath $fpath_plugins
 plugin-load $plugins
 
-# Configuration
-source $ZDOTDIR/config/aliases.zsh
-source $ZDOTDIR/config/keymaps.zsh
-source $ZDOTDIR/config/fzf.zsh
+# Aliases
+alias eza="eza --git --group-directories-first --hyperlink --icons"
+alias ls="eza"
+alias ll="ls -l"
+alias la="ls -la"
+alias cat="bat"
+
+# Keymaps
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+bindkey '^[w' kill-region
+
+source $ZDOTDIR/plugins/fzf.zsh
 
 # Shell integrations
 eval "$(fzf --zsh)"

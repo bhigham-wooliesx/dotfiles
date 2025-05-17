@@ -30,7 +30,7 @@ zstyle ':zephyr:plugin:editor' dot-expansion 'yes'
 zstyle ':zephyr:plugin:editor' symmetric-ctrl-z 'yes'
 
 # Expand aliases to their actual command like Fish abbreviations.
-# zstyle ':zephyr:plugin:editor' glob-alias 'yes'
+zstyle ':zephyr:plugin:editor' glob-alias 'yes'
 
 # Set the default (magic) command when hitting enter on an empty prompt.
 zstyle ':zephyr:plugin:editor' magic-enter 'yes'
