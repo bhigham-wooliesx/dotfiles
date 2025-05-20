@@ -3,4 +3,4 @@
 -- Add any additional options here
 
 vim.g.lazyvim_picker = 'fzf'
-vim.g.snacks_animate = false
+-- vim.g.snacks_animate = false

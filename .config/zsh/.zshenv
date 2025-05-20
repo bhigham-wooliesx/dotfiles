@@ -12,7 +12,9 @@ export VISUAL="nvim"
 export PAGER="less"
 
 export LESSOPEN="| LESSQUIET=1 /opt/homebrew/bin/lesspipe.sh %s"
-export LESSCOLORIZER='bat --theme="Catppuccin Mocha"'
+export LESSCOLORIZER='bat'
+
+export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
 
 # Projects
 export PROJECT_HOME="$HOME/Projects"

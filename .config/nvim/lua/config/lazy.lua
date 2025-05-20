@@ -24,10 +24,8 @@ require('lazy').setup({
     { import = 'lazyvim.plugins.extras.coding.neogen' },
     { import = 'lazyvim.plugins.extras.dap.core' },
     { import = 'lazyvim.plugins.extras.dap.nlua' },
-    { import = 'lazyvim.plugins.extras.editor.aerial' },
     { import = 'lazyvim.plugins.extras.editor.dial' },
     { import = 'lazyvim.plugins.extras.editor.fzf' },
-    { import = 'lazyvim.plugins.extras.editor.inc-rename' },
     { import = 'lazyvim.plugins.extras.editor.refactoring' },
     { import = 'lazyvim.plugins.extras.formatting.biome' },
     { import = 'lazyvim.plugins.extras.formatting.black' },
@@ -54,7 +52,6 @@ require('lazy').setup({
     { import = 'lazyvim.plugins.extras.test.core' },
     { import = 'lazyvim.plugins.extras.ui.treesitter-context' },
     { import = 'lazyvim.plugins.extras.util.dot' },
-    { import = 'lazyvim.plugins.extras.util.gitui' },
     { import = 'lazyvim.plugins.extras.util.mini-hipatterns' },
     { import = 'lazyvim.plugins.extras.util.octo' },
     { import = 'lazyvim.plugins.extras.util.project' },
@@ -71,7 +68,7 @@ require('lazy').setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { 'catppuccin' } },
+  install = { colorscheme = { 'habamax' } },
   checker = {
     enabled = true, -- check for plugin updates periodically
     notify = false, -- notify on update
